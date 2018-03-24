@@ -20,4 +20,6 @@ test:
 
 production:
   <<: *default
-  database: robotics_map_prod
+  database: robotics_map_production
+  username: <%= ENV["DB_USER"] %>
+  password: <%= ENV["DB_USER"] %>

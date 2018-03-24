@@ -6,6 +6,10 @@ class InstitutionController < ApplicationController
     render json: institutions.to_json(:methods => [:women_ratio]), status: :ok
   end
 
+  def search
+
+  end
+
   def show
     institution = Institution.find(params[:id])
     render json: institution.to_json(:methods => [:women_ratio]), status: :ok
@@ -24,6 +28,9 @@ class InstitutionController < ApplicationController
         render json: institution.errors, status: :bad_request
       end
     end
+  end
+
+  def hello
   end
 
   private

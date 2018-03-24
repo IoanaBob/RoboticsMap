@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  root "institutions#hello"
+  
   get "institutions", to: "institution#index"
   get "institution/:id", to: "institution#show"
   post "institution/:category_id", to: "institution#create"
