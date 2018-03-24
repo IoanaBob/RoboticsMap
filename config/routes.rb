@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   get "categories", to: "category#index"
   get "category/:id", to: "category#show"
   post "category", to: "category#create"
+
+  get "ratings", to: "rating#index"
+  get "rating/:id", to: "rating#show"
+  post "rating/:user_id/:institution_id", to: "rating#create"
 end
