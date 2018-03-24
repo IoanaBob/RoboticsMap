@@ -31,6 +31,7 @@ class InstitutionController < ApplicationController
   end
 
   def hello
+    render json: {content: "Hello to Robotics Map API!"}, status: :ok
   end
 
   private
