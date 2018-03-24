@@ -16,4 +16,12 @@ Rails.application.routes.draw do
   get "projects", to: "project#index"
   get "project/:id", to: "project#show"
   post "project/:institution_id", to: "project#create"
+
+  get "events", to: "event#index"
+  get "event/:id", to: "event#show"
+  post "event/:institution_id", to: "event#create"
+
+  get "users", to: "user#index"
+  get "user/:id", to: "user#show"
+  post "user", to: "user#create"
 end
