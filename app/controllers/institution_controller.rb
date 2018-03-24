@@ -2,12 +2,13 @@ class InstitutionController < ApplicationController
 
   def index
     institutions = Institution.all
-    render json: institutions, status: :ok
+    puts(institutions.first.women_ratio)
+    render json: institutions.to_json(:methods => [:women_ratio]), status: :ok
   end
 
   def show
     institution = Institution.find(params[:id])
-    render json: institution, status: :ok
+    render json: institution.to_json(:methods => [:women_ratio]), status: :ok
   end
 
   def create
