@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   get "ratings", to: "rating#index"
   get "rating/:id", to: "rating#show"
   post "rating/:user_id/:institution_id", to: "rating#create"
+
+  get "projects", to: "project#index"
+  get "project/:id", to: "project#show"
+  post "project/:institution_id", to: "project#create"
 end
