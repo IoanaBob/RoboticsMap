@@ -1,4 +1,5 @@
 class EventController < ApplicationController
+  #skip_before_filter :verify_authenticity_token, :only => [:update]
 
   def index
     if params[:sort].present?
@@ -39,6 +40,6 @@ class EventController < ApplicationController
   def event_params
     params
       .require(:event)
-      .permit(:name, :capacity, :starting_date, :ending_date)
+      .permit(:name, :description, :capacity, :starting_date, :ending_date)
   end
 end
